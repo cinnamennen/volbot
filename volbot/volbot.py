@@ -214,7 +214,7 @@ class VolBot(irc.bot.SingleServerIRCBot):
     @Trigger("^\s*ls\s*$")
     def on_ls(self, sender, channel, msg):
         """Trigger handler for ls"""
-        self.privmsg(channel, "bin dev home media opt root selinux sys usr boot etc lib mnt proc sbin srv tmp var")
+        self.privmsg(channel, "caleb")
 
     @Trigger(r"what are tho+se")
     def on_those(self, sender, channel, msg):
