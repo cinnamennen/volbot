@@ -213,8 +213,10 @@ class VolBot(irc.bot.SingleServerIRCBot):
 
     @Trigger("^\s*ls\s*$")
     def on_ls(self, sender, channel, msg):
+
         """Trigger handler for ls"""
         self.privmsg(channel, "caleb")
+        print "my ls was called"
 
     @Trigger(r"what are tho+se")
     def on_those(self, sender, channel, msg):
