@@ -190,7 +190,10 @@ class VolBot(irc.bot.SingleServerIRCBot):
     def on_ayy(self, sender, channel, msg):
         """Trigger handler for ayy, lmao"""
         ayy = re.findall(r".*\b[Aa]y+\b", msg)
-        message = 'lma' + (ayy[0].count('y') - 1) * 'o'
+        if random.random() > 95:
+            message = 'lma' + (ayy[0].count('y') - 1) * 'o'
+        else:
+            message = 'LAM' + (ayy[0].count('y') - 1) * 'O' + '-BB8'
         self.privmsg(channel, message)
 
     @Trigger("^.*$")
